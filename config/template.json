@@ -1,0 +1,42 @@
+{
+    "common":{
+        "true":{
+            "login":"マイページ",
+            "loginst":"0"
+        },
+        "false":{
+            "userName":"ゲスト",
+            "login":"ログイン"
+        }
+    },
+
+    "loginrateover":{
+        "message":"異常な回数のアクセスが検知されました。ログイン機能は一時的に制限されています。",
+        "login":"ログイン",
+        "userName":"ゲスト"
+    },
+
+    "registerrateover":{
+        "message":"異常な回数のアクセスが検知されました。新規登録機能は一時的に制限されています。",
+        "login":"ログイン",
+        "userName":"ゲスト"
+    },
+
+    "emailchrateover":{
+        "message":"異常な回数のアクセスが検知されました。メールアドレス変更機能は一時的に制限されています。",
+        "login":"ログイン",
+        "userName":"ゲスト"
+    },
+
+    "passwdresetrateover":{
+        "message":"異常な回数のアクセスが検知されました。パスワードリセット機能は一時的に制限されています。",
+        "login":"ログイン",
+        "userName":"ゲスト"
+    },
+
+    "contactrateover":{
+        "message":"異常な回数のアクセスが検知されました。お問い合わせ機能は一時的に制限されています。",
+        "login":"ログイン",
+        "userName":"ゲスト"
+    }
+}

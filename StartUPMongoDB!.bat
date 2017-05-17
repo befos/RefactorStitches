@@ -1,0 +1,1 @@
+mongod --dbpath C:\mongodb\data --logpath C:\mongodb\logs\mongodb.log

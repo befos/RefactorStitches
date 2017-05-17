@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="../../css/normalize.css">
+    <title>stitches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="../../js/Dfolder/jquery-3.1.1.min.js"></script>
+    <script src="../../js/Dfolder/jquery_program.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/animation.css">
+</head>
+
+<body>
+    <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+    <script src="../../js/Dfolder/bootstrap.min.js"></script>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="">stitches</a>
+            </div>
+            <div class="collapse navbar-collapse target">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="#">マイページ</a></li>
+                    <li class="active"><a href="#">質問広場</a></li>
+                    <li><a href="#">勉強会</a></li>
+                    <li><a href="#">問い合わせ</a></li>
+                </ul>
+                <p class="navbar-text navbar-right nav-padding">ようこそ <a href="#" class="navbar-link">ゲスト</a> さん</p>
+            </div>
+        </nav>
+    </header>
+    <!-- nav分のスペース確保ボックス -->
+    <div class="top_space_nav"></div>
+    <!--ここからコンテンツ-->
+    <img class="qna_header_img shadow" width="1280px" height="250px" src="../../img/qna_header.jpg" alt="質問広場" />
+    <div class="col-sm-2">
+        <section class="mypage_sub">
+
+            <a href="質問投稿画面" class="qthrow">質問投稿</a>
+            <article class="category stitchbox">
+              <div class="category_btn">
+                <img src="../../img/category_btn.png" alt="カテゴリ" width="140px" height="40px">
+                <p>カテゴリ</p>
+                <ul>
+                  <li class="long_tx"><a href="#">JavaScript</a></li>
+                  <li><a href="#">Ruby</a></li>
+                  <li><a href="#">Python</a></li>
+                  <li><a href="#">PHP</a></li>
+                  <li><a href="#">JAVA</a></li>
+                  <li><a href="#">Swift</a></li>
+                  <li><a href="#">SQL</a></li>
+                  <li><a href="#">その他</a></li>
+                </ul>
+              </div>
+            </article>
+        </section>
+    </div>
+    <section class="col-sm-10">
+            <article class="row searchbox">
+                <div class="col-sm-10 col-xs-10">
+                    <textarea placeholder="検索" rows="1" class="form-control" id="InputTextarea"></textarea>
+                </div>
+                <div class="col-sm-2 col-xs-2">
+                    <input type="submit" value="検索" class="btn btn-primary btn-block">
+                </div>
+            </article>
+            <article>
+                  <table class="resultList">
+                  <thead>
+                  <tr>
+                  <th class="qna_title">タイトル</th>
+                  <th class="qna_user">ユーザー</th>
+                  <th class="qna_time">投稿時間</th>
+                  <th class="qna_answer">回答</th>
+                  <th class="qna_diff">難易度</th>
+                </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>【エラー】過去に削除した画像に関するエラーについて</span></a></td>
+                  <td class="qna_user"><span>nobinobi </span></td>
+                  <td class="qna_time"><span>2016-12/20</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>初心者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>jQuery スクロールに連動させて要素を囲みたいです</span></a></td>
+                  <td class="qna_user"><span>phpuser</span></td>
+                  <td class="qna_time"><span>2016-12/20</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>初心者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>centos7 service コマンドが見つからない</span></a></td>
+                  <td class="qna_user"><span>deltaZone</span></td>
+                  <td class="qna_time"><span>2016-12/20</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>初心者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>CakePHP 3 の複数選択可能なチェックボックスの使い方</span></a></td>
+                  <td class="qna_user"><span>takumaro_web </span></td>
+                  <td class="qna_time"><span>2016-12/20</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>中級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>拡大時のUIImageViewのクロップ</span></a></td>
+                  <td class="qna_user"><span>hamesurodorige </span></td>
+                  <td class="qna_time"><span>2016-12/20</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>中級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>インスタグラムの画像自動取得　Instafeed.js について</span></a></td>
+                  <td class="qna_user"><span>deltaZone</span></td>
+                  <td class="qna_time"><span>2016-12/19</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>上級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>.incファイル smarty $1〜$22まで宣言もされてないのに使われている。</span></a></td>
+                  <td class="qna_user"><span>deltaZone</span></td>
+                  <td class="qna_time"><span>2016-12/19</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>上級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>オセロのプログラムを初めて作ってみたのですがうまくいきません</span></a></td>
+                  <td class="qna_user"><span>deltaZone</span></td>
+                  <td class="qna_time"><span>2016-12/19</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>中級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>インスタンス作成時の仕組みについて</span></a></td>
+                  <td class="qna_user"><span>takumaro_web</span></td>
+                  <td class="qna_time"><span>2016-12/19</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>中級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>レスポンシブデザインの複数formのsubmit切り分け</span></a></td>
+                  <td class="qna_user"><span>takumaro_web</span></td>
+                  <td class="qna_time"><span>2016-12/19</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>上級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>base64変換プログラムについて</span></a></td>
+                  <td class="qna_user"><span>hamesurodorige</span></td>
+                  <td class="qna_time"><span>2016-12/19</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>中級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>ワードプレスで立ち上げた新規ブログにアクセスすると警告メッセージが表示される</span></a></td>
+                  <td class="qna_user"><span>hamesurodorige</span></td>
+                  <td class="qna_time"><span>2016-12/18</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>上級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>node.js の post 通信のエラー原因を調べたい</span></a></td>
+                  <td class="qna_user"><span>hamesurodorige</span></td>
+                  <td class="qna_time"><span>2016-12/18</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>上級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>Win32APIを用いた動画として映るデスクトップキャプチャのプログラミングについて</span></a></td>
+                  <td class="qna_user"><span>hamesurodorige</span></td>
+                  <td class="qna_time"><span>2016-12/18</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>中級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>Webサイトのエラーメッセージについて</span></a></td>
+                  <td class="qna_user"><span>hamesurodorige</span></td>
+                  <td class="qna_time"><span>2016-12/18</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>上級者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>【 PHP・WordPress 】アロー演算子の右側にあるのは何ですか？</span></a></td>
+                  <td class="qna_user"><span>nobinobi</span></td>
+                  <td class="qna_time"><span>2016-12/18</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>初心者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>Composer　Composer.json</span></a></td>
+                  <td class="qna_user"><span>nobinobi</span></td>
+                  <td class="qna_time"><span>2016-12/18</span></td>
+                  <td class="qna_answer"><span>未回答</span></td>
+                  <td class="qna_diff"><span>初心者</span></td>
+                  </tr>
+                  <tr>
+                  <td class="qna_title"><a href=""><a href=""><span>メルカリのようなアプリをJavaで実現するには（DB操作）</span></a></td>
+                  <td class="qna_user"><span>nobinobi</span></span></td>
+                  <td class="qna_time"><span>2016-1/1</span></td>
+                  <td class="qna_answer"><span>回答済</span></td>
+                  <td class="qna_diff"><span>初心者</span></td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  <div class="col-sm-offset-4 col-sm-8 col-xs-offset-2 col-xs-10">
+                  <nav>
+                	<ul class="pagination">
+                		<li class="disabled"><a href="#" aria-label="前のページへ">
+                				<span aria-hidden="true">«</span>
+                			</a>
+                		</li>
+                		<li class="active"><a href="#">1</a></li>
+                		<li><a href="#">2</a></li>
+                		<li><a href="#">3</a></li>
+                		<li><a href="#">4</a></li>
+                		<li><a href="#">5</a></li>
+                		<li class="disabled">
+                			<a href="#" aria-label="次のページへ">
+                				<span aria-hidden="true">»</span>
+                			</a>
+                		</li>
+                	</ul>
+                </nav>
+              </div>
+            </article>
+        </section>
+    <div class="toTop"></div>
+    <footer>
+    </footer>
+</body>

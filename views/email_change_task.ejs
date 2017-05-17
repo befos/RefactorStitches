@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+</head>
+<html lang="ja">
+<body>
+  <h1>確認画面</h1>
+  <h2>変更しますか？</h2>
+  <form action="/email_change_submit" method="post">
+    <table border="0">
+      <tr>
+        <td>変更後のEmailアドレス</td>
+        <td><%= email %></td>
+      </tr?
+    </table>
+    <input type="hidden" name="email" value="<%= email %>">
+    <input id="token" type="hidden" name="_csrf" value="<%= reqCsrf %>"><!-- csrfToken -->
+    <input type="submit" value="変更">
+  </form>
+</body>
+</html>

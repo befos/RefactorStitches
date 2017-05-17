@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <link href="/css/normalize.css">
+    <title>Stitches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="/js/Dfolder/jquery-3.1.1.min.js"></script>
+    <script src="/js/Dfolder/jquery_program.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/qna.css">
+  </head>
+
+  <body>
+
+        <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+        <script async defer src="/js/Dfolder/bootstrap.min.js"></script>
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                    <a class="navbar-brand" href="/">Stitches</a>
+                </div>
+                <div class="collapse navbar-collapse target">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">トップ</a></li>
+                        <% if(login != "マイページ"){ %>
+                        <li><a href="/register">新規登録</a></li>
+                        <% } %>
+                        <li><a href="/mypage"><%= login %></a></li>
+                        <li class="active"><a href="/question_board_top">質問広場</a></li>
+                        <li><a href="/contact">問い合わせ</a></li>
+                        <% if(login == "マイページ"){ %>
+                        <li><a href="/logout">ログアウト</a></li>
+                        <% } %>
+                    </ul>
+                    <p class="navbar-text navbar-right nav-padding">ようこそ <a href="/mypage" class="navbar-link"><%= userName %></a> さん</p>
+                </div>
+            </nav>
+        </header>
+        <!-- nav分のスペース確保ボックス -->
+        <div class="top_space_nav"></div>
+        <!--ここからコンテンツ-->
+        <div class="container">
+          <div class="stitchbox">
+              <h1><%= fo.title %></h1>
+              <div class="row">
+                  <div class="col-sm-3 ">
+              <div class="qna_disp_button">
+                <form method="get" action="/qna_bq_up">
+                    <input type="hidden" name="mfo" value="<%= data.mfo %>">
+                    <input type="hidden" name="myid" value="<%=  data.myid %>">
+                    <input class="btn btn-primary btn-block" type="submit" value="質問に高評価を付ける">
+                </form>
+                </div>
+              </div>
+              <% if(data.myid == data.hostid){ %>
+                  <div class="col-sm-3 ">
+              <div class="qna_disp_button">
+                <input class="btn btn-primary btn-block" type="button" value="BAを付ける" onClick="location.href='/question_board_ba?<%= data.mfo %>'">
+                </div>
+              </div>
+              <% } %>
+                 <div class="col-sm-3 ">
+              <div class="qna_disp_button">
+                <form method="get" action="/qna_eq">
+                    <input class="btn btn-primary btn-block" type="submit" value="質問及び回答を編集する">
+                </form>
+              </div>
+                </div>
+            </div>
+		            <div class="row">
+                <div class="col-sm-3 ">
+                  <p class="solidline">質問者：<%= fo.host %></p>
+                </div>
+                <div class="col-sm-6">
+                  <p class="solidline">質問日時：<%= fo.uday %></p>
+                </div>
+              </div>
+            <div class="qna_disp" align="center">
+              <h3>質問内容</h3>
+              <p><%- fo.ques %></p>
+            </div>
+          </div>
+          <input type="button" value="回答する" class="btn btn-primary btn-block" onClick="location.href='/question_board_ansinput?<%= foid %>'">
+          <!-- ↓のdivを量産することで回答を複数表示することでいいと思うけどどうなるかわからないのであとで相談-->
+          <% if(data.BAflag == "true"){ %>
+          <div class="ba_stitchbox">
+            <span><img src="img/ba_disp.png" alt="ベストアンサー"></span>
+            <div class="scr qna_disp">
+              <div class="col-sm-3">
+                <p class="solidline">回答者：<%= data.BAAnswer[0] %></p>
+              </div>
+              <div class="col-sm-6">
+                <p class="solidline">回答日時：<%= data.BACuday[0] %></p>
+              </div>
+              <div class="col-sm-12">
+                  <%- data.BACont[0] %>
+            </div>
+            </div>
+            </div>
+         <% }else{ %>
+             <div class="ba_stitchbox">
+               <span><img src="img/ba_disp.png" alt="ベストアンサー"></span>
+               <div class="scr qna_disp">
+                 <div class="col-sm-3">
+                   <p class="solidline">回答者：</p>
+                 </div>
+                 <div class="col-sm-6">
+                   <p class="solidline">回答日時：</p>
+                 </div>
+                 <div class="col-sm-12">
+                     現在BAは選択されていません。
+               </div>
+               </div>
+               </div>
+         <% } %>
+          <% for(var i=0 ;i < data.Answer.length; i++){ %>
+          <div class="stitchbox">
+            <div class="scr qna_disp">
+              <div class="col-sm-3">
+                <p class="solidline">回答者：<%= data.Answer[i] %></p>
+              </div>
+              <div class="col-sm-3">
+                <p class="solidline">回答日時：<%= data.Cuday[i] %></p>
+              </div>
+              <div class="col-sm-12">
+                  <%- data.Cont[i] %>
+            </div>
+            </div>
+        </div>
+        <% } %>
+  </body>
+</html>

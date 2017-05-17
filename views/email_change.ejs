@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+   <html lang="ja">　
+   <meta charset="UTF-8">
+   <script async defer src="/js/Kfolder/output_js/emailchange.js" type="text/javascript"></script>
+   <script async defer src="/js/Kfolder/common.js" type="text/javascript"></script>
+</head>
+  <body>
+  <h1>メールアドレス変更画面</h1>
+  <form action="/email_change_mail" method="post" onsubmit="return conrimMessage();">
+  <table border="0">
+    <tr>
+      <td><input type="email" name="id" id="Email" size="20" maxlength="40" placeholder="変更後のメールアドレスを入力"></td>
+    </tr>
+  </table>
+  <input type="submit" value="送信">
+   <input type="reset" value="リセット">
+  <input id="token" type="hidden" name="_csrf" value="<%= reqCsrf %>"><!-- csrfToken -->
+  <input id="Error_status" type="hidden" name="Error_status" value="<%= error %>">
+  </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+    "sendmailconf":{
+        "url1":"http://www.stitches.space/password_reset_regene?",
+        "url2":"http://www.stitches.space/email_change_task?",
+        "url3":"http://www.stitches.space/register_confirm?",
+        "url4":"http://www.stitches.space/question_board_view?",
+        "url5":"http://www.stitches.space/question_board_view?",
+        "minute":10
+    },
+
+    "rateoverconf1":{
+        "request":2000,
+        "duration":600000,
+        "use":true
+    },
+
+    "rateoverconf2":{
+        "request":2000,
+        "duration":600000,
+        "use":true
+    },
+
+    "rateoverconf3":{
+        "request":5000,
+        "duration":600000,
+        "use":true
+    },
+
+    "rateoverconf4":{
+        "request":2000,
+        "duration":600000,
+        "use":true
+    },
+
+    "rateoverconf5":{
+        "request":2000,
+        "duration":600000,
+        "use":true
+    }
+}

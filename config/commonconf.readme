@@ -1,0 +1,12 @@
+sendmailconf ...　メール送信時のURL設定及び認証が有効な分数を設定
+
+rateoverconf ... request: RateLimiterが設置されているミドルウェアに対して何回のリクエストがあればブロックするか設定
+                 duration: ms単位で秒数を指定(600000msなら10分) (example!　request 2, duration:600000なら10分間に2回のリクエストがあればブロック)
+                 use: trueで保護が有効
+
+                 設定を分けることにした
+                 conf1...contact_submit
+                 conf2...email_change_mail
+                 conf3...login_check
+                 conf4...password_reset_mail
+                 conf5...register_check

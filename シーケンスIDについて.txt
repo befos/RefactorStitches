@@ -1,0 +1,43 @@
+2重送信や、不正な処理を防止するために処理後は各IDにtrueを入れる事にした。
+
+
+各処理
+session.hoge
+
+contact
+    con
+
+email_change
+    em
+    0 email_change
+    1 email_change_mail
+    2 email_change_task
+    3 email_change_submit
+
+login
+    log
+
+password_reset
+    pw
+
+question_board_input
+    qbi
+
+question_board_ansinput
+    qbai
+
+register
+    regi
+
+メモ
+    req.session.em = false;
+    if(req.session.em === true){//二重送信の防止
+        return hadUrlError(req, res);
+    }
+
+    function hadUrlError(req ,res){
+        req.session.error_status = 5;
+        res.redirect('/contact');
+        mongoose.disconnect();
+    }
+    req.session.em = true;

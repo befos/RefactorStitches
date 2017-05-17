@@ -1,0 +1,4 @@
+Copyright (c) 2013 Yukinobu Kurata
+Released under the MIT license
+https://github.com/jackmoore/colorbox
+Copyright (c) 2011 Cull TV, Inc. <jhurliman@cull.tv>
